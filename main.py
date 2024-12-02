@@ -9,5 +9,5 @@ graph.add_weighted_edges_from(points)
 nx.draw(graph, with_labels = True)
 nt = pv.network.Network(height='99vh')
 nt.from_nx(graph)
-nt.show('graph.html')
+nt.show('output/graph.html')
 
