@@ -1,0 +1,34 @@
+
+graph:
+  name: 'ГКП №16'
+  childs:
+    - node:
+        name: 'Компьютеры'
+    - node:
+        name: 'Сеть'
+    - node:
+        name: 'Видеонаблюдение'
+    - node:
+        name: 'МИС'
+    - node:
+        name: 'Телефония'
+    - node:
+        name: 'Телефония мобильная'
+    - node:
+        name: 'Оргтехника/Картриджи'
+    - node:
+        name: 'Прочие ИС'
+    - node:
+        name: 'ДЛО/ЛЛО'
+    - node:
+        name: '1С'
+    - node:
+        name: 'Бухгалтерия'
+    - node:
+        name: 'ЭП/Криптография'
+    - node:
+        name: 'Заявки в контрактную на товары и услуги'
+    - node:
+        name: '(Ф)РМО/(Ф)РМР'
+    - node:
+        name: 'ВИМИС'
