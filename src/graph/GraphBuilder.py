@@ -4,10 +4,16 @@ from yaml_parser.YamlParserReturnCode import YamlParserReturnCode
 from graph.GraphBuilderReturnCode import GraphBuilderReturnCode
 import pyvis as pv
 import networkx as nx
+import os
 
 
 class GraphBuilder:
     def build(self, yaml: str, html: str) -> int:
+        if not os.path.isfile(yaml):
+            return GraphBuilderReturnCode.FILE_DOES_NOT_EXISTS
+        elif not html:
+            return GraphBuilderReturnCode.OUTPUT_FILE_PATH_EMPTY
+
         self.parser = YamlParser()
         result = self.parser.build(yaml)
 
@@ -30,7 +36,7 @@ class GraphBuilder:
         nt = pv.network.Network()
 
         nt.from_nx(graph)
-        
+
         nt.show(html)
 
         return GraphBuilderReturnCode.OK
