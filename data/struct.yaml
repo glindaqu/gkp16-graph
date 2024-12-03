@@ -1,6 +1,6 @@
 
 graph:
-  name: 'ГКП №16'
+  name: 'ИТО'
   childs:
     - node:
         name: 'Компьютеры'
