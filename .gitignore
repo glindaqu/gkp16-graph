@@ -165,3 +165,4 @@ output/
 .vscode/
 graph.html
 data/struct.xml
+mock/
