@@ -13,7 +13,7 @@ class YamlParser:
             return YamlParserReturnCode.WRONG_EXTENSION
         with open(path, "r") as file:
             self.contents = yaml.safe_load(file)
-        if not self.contents["graph"]:
+        if self.contents is None or not self.contents["graph"]:
             return YamlParserReturnCode.FILE_CONTAINS_UNEXPECTED_CONTENT
         return YamlParserReturnCode.OK
 
