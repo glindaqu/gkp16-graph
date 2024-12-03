@@ -28,12 +28,14 @@ class GraphBuilder:
         relations = []
 
         for i in contents["graph"]["childs"]:
-            relations.append((contents["graph"]["name"], i["node"]["name"].replace(' ', '\n'), 1))
+            relations.append(
+                (contents["graph"]["name"], i["node"]["name"].replace(" ", "\n"), 1)
+            )
 
         graph.add_weighted_edges_from(relations)
 
         nx.draw(graph, with_labels=True)
-        nt = pv.network.Network()
+        nt = pv.network.Network(height="99vh")
 
         nt.from_nx(graph)
 
