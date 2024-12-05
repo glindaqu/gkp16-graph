@@ -21,7 +21,7 @@ class TestYamlParser(unittest.TestCase):
 
         expecting = {
             "graph": {
-                "name": "ГКП №16",
+                "name": "ИТО",
                 "childs": [
                     {"node": {"name": "Компьютеры"}},
                     {"node": {"name": "Сеть"}},
